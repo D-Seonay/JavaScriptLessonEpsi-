@@ -12,9 +12,6 @@ function afficherProduit() {
     var quantiteStock = 10;
     const prixProduit = 5;
     let enPromotion = false;
-    
-    console.log("nomProduit: " + nomProduit);
-    console.log("quantiteStock: " + quantiteStock);
-    console.log("prixProduit: " + prixProduit);
-    console.log("enPromotion: " + enPromotion);
+
+    console.log("nomProduit: " + nomProduit + "\nquantiteStock: " + quantiteStock + "\nprixProduit: " + prixProduit + "\nenPromotion: " + (enPromotion ? "oui" : "non"));
 }
