@@ -27,7 +27,9 @@ let reservations = [
 // 2. Lister toutes les réservations non payées
 let reservationsNonPayees = reservations.filter(reservation => !reservation.paye);
 console.log("Réservations non payées:", reservationsNonPayees);
-
+reservationsNonPayees.forEach(reservation => {
+  console.log(` ID : ${reservation.id} \n Nom du client : ${reservation.nomClient} \n Chambre : ${reservation.chambre} \n Nombre de nuits : ${reservation.nbNuits} \n Payé : ${reservation.paye}` )
+});
 // 3. Calculer le revenu total potentiel de toutes les réservations non payées
 let revenuTotalPotentiel = reservationsNonPayees.reduce((total, reservation) => total + (reservation.nbNuits * 100), 0);
 console.log("Revenu total potentiel:", revenuTotalPotentiel);
